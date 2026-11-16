@@ -1,0 +1,22 @@
+trigger:
+  branches:
+    include: [main]
+pool:
+  vmImage: ubuntu-latest
+steps:
+  - task: AzureCLI@2
+    displayName: Bicep lint and compile
+    inputs:
+      azureSubscription: 'REPLACE_WITH_AZURE_SERVICE_CONNECTION'
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        bash scripts/validate.sh
+  - task: AzureCLI@2
+    displayName: Preview storage deployment
+    inputs:
+      azureSubscription: 'REPLACE_WITH_AZURE_SERVICE_CONNECTION'
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        az deployment group what-if --resource-group 'REPLACE_WITH_RESOURCE_GROUP' --parameters examples/01-storage/dev.bicepparam

@@ -1,0 +1,3 @@
+{
+  "analyzers": { "core": { "enabled": true, "rules": { "no-unused-params": { "level": "warning" }, "no-hardcoded-location": { "level": "warning" }, "secure-secrets-in-params": { "level": "error" } } } }
+}
