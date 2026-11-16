@@ -227,3 +227,8 @@ Add NSGs, private endpoints, diagnostic settings, Azure SQL, AKS, Container Apps
 - [What-if deployments](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-what-if)
 - [GitHub Actions deployment](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-github-actions)
 - [Azure Verified Modules](https://azure.github.io/Azure-Verified-Modules/)
+
+
+## Architecture pattern library
+
+See [patterns/README.md](patterns/README.md) for eight additional Bicep architecture patterns, each with source code, parameter files, an editable draw.io diagram and SVG preview. The dedicated GitHub OIDC workflow is at `.github/workflows/pattern-oidc.yml`.
